@@ -36,9 +36,23 @@ kubectl describe pods client-pod
 
   - once created can only manually update the image
 
+  - Runs a single set of containers
+
+  - Good for one-off dev purposes
+
+  - Rarely used directly in production
+
 - Services: Sets up networking in a kubernetes Cluster
 
 - Deployment: Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
+
+  - Runs a set of identical pods (one or more)
+
+  - Monitors the state of each pod, updates as necessary
+
+  - Good for dev
+
+  - Good for production
 
 ## Service Types
 

@@ -2,13 +2,17 @@
 
 ## Common Commands
 
-### Deploy new files to cluster
+### Apply
+
+How we make any changes to the kubernetes cluster
 
 ```bash
-kubectl apply -f client-pod.yaml
+kubectl apply -f ./SIMPLEK8S/client-pod.yaml
 ```
 
-### See status of objects in kubernetes cluster
+### Get
+
+See status of objects in kubernetes cluster
 
 ```bash
 kubectl get pods
@@ -16,6 +20,14 @@ kubectl get pods
 
 ```bash
 kubectl get services
+```
+
+### Describe
+
+To get information about a object use describe
+
+```bash
+kubectl describe pods ./SIMPLEK8S/client-pod.yaml
 ```
 
 ## Service Types

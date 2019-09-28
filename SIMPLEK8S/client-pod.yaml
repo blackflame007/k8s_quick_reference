@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: client
-      image: blackflame007/multi-client
+      image: blackflame007/multi-worker
       ports:
         - containerPort: 3000

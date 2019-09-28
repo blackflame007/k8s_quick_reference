@@ -9,4 +9,4 @@ spec:
     - name: client
       image: blackflame007/multi-worker
       ports:
-        - containerPort: 3000
+        - containerPort: 9999

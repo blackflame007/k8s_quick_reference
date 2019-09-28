@@ -27,8 +27,18 @@ kubectl get services
 To get information about a object use describe
 
 ```bash
-kubectl describe pods ./SIMPLEK8S/client-pod.yaml
+kubectl describe pods client-pod
 ```
+
+## Object Types
+
+- Pods: Runs one or more closely related containers
+
+  - once created can only manually update the image
+
+- Services: Sets up networking in a kubernetes Cluster
+
+- Deployment: Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
 
 ## Service Types
 

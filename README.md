@@ -32,7 +32,7 @@ kubectl describe pods client-pod
 
 ## Object Types
 
-- Pods: Runs one or more closely related containers
+- <b>Pods</b>: Runs one or more closely related containers
 
   - once created can only manually update the image
 
@@ -42,9 +42,9 @@ kubectl describe pods client-pod
 
   - Rarely used directly in production
 
-- Services: Sets up networking in a kubernetes Cluster
+- <b>Services</b>: Sets up networking in a kubernetes Cluster
 
-- Deployment: Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
+- <b>Deployment</b>: Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
 
   - Runs a set of identical pods (one or more)
 

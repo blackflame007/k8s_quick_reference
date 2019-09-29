@@ -5,6 +5,7 @@
 ### Apply
 
 How we make any changes to the kubernetes cluster
+To create or update an object you must pass in the config file
 
 ```bash
 kubectl apply -f ./SIMPLEK8S/client-pod.yaml
@@ -15,11 +16,15 @@ kubectl apply -f ./SIMPLEK8S/client-pod.yaml
 See status of objects in kubernetes cluster
 
 ```bash
-kubectl get pods
+kubectl get services
 ```
 
 ```bash
-kubectl get services
+kubectl get deployments
+```
+
+```bash
+kubectl get pods
 ```
 
 ### Describe
@@ -30,7 +35,27 @@ To get information about a object use describe
 kubectl describe pods client-pod
 ```
 
+### Delete
+
+To delete an object you must pass in the config file that was used to create that object
+
+```bash
+kubectl delete -f ./SIMPLEK8S/client-pod.yaml
+```
+
 ## Object Types
+
+- <b>Services</b>: Sets up networking in a kubernetes Cluster
+
+- <b>Deployment</b>: Replaces pod... Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
+
+  - Runs a set of identical pods (one or more)
+
+  - Monitors the state of each pod, updates as necessary
+
+  - Good for dev
+
+  - Good for production
 
 - <b>Pods</b>: Runs one or more closely related containers
 
@@ -41,18 +66,6 @@ kubectl describe pods client-pod
   - Good for one-off dev purposes
 
   - Rarely used directly in production
-
-- <b>Services</b>: Sets up networking in a kubernetes Cluster
-
-- <b>Deployment</b>: Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
-
-  - Runs a set of identical pods (one or more)
-
-  - Monitors the state of each pod, updates as necessary
-
-  - Good for dev
-
-  - Good for production
 
 ## Service Types
 

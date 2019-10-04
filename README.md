@@ -75,6 +75,8 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
   kubectl create secret generic <secret_name> --from-literal key=value
   ```
 
+  `--from-literal` is what allows us to store the secret information in this actual command using a key and value
+
   - We want to create secrets in the cluster manually(take an imperative approach) to prevent this data from being exposed in plain text in our YAML files
   - Secret types
 

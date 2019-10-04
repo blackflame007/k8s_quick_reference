@@ -71,6 +71,10 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 
 - **Secrets**: Securely stores one or more pieces of information in the cluster such as a database password
 
+  ```bash
+  kubectl create secret generic <secret_name> --from-literal key=value
+  ```
+
   - We want to create secrets in the cluster manually(take an imperative approach) to prevent this data from being exposed in plain text in our YAML files
   - Secret types
 
@@ -79,10 +83,6 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
     - **docker-registry**: [docker-registry](https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod) type indicates Authentication with a custom container registry
 
     - **tls**: [tls](https://kubernetes.github.io/ingress-nginx/user-guide/tls/) .pem files and CA secret type
-
-```bash
-kubectl create secret generic <secret_name> --from-literal key=value
-```
 
 ## Service Types
 

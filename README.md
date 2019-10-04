@@ -1,5 +1,7 @@
 # Kubernetes Quick Reference Guide
 
+We are using a [declarative](https://tylermcginnis.com/imperative-vs-declarative-programming/) approach when using kubernetes
+
 ## Common Commands
 
 ### Apply
@@ -45,9 +47,9 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 
 ## Object Types
 
-- <b>Services</b>: Sets up networking in a kubernetes Cluster
+- **Services**: Sets up networking in a kubernetes Cluster
 
-- <b>Deployment</b>: Replaces pod... Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
+- **Deployment**: Replaces pod... Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
 
   - Runs a set of identical pods (one or more)
 
@@ -57,7 +59,7 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 
   - Good for production
 
-- <b>Pods</b>: Runs one or more closely related containers
+- **Pods**: Runs one or more closely related containers
 
   - once created can only manually update the image
 
@@ -66,6 +68,21 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
   - Good for one-off dev purposes
 
   - Rarely used directly in production
+
+- **Secrets**: Securely stores one or more pieces of information in the cluster such as a database password
+
+  - We want to create secrets in the cluster manually(take an imperative approach) to prevent this data from being exposed in plain text in our YAML files
+  - Secret types
+
+    - **generic**: [generic](https://kubernetes.io/docs/concepts/configuration/secret/) type indicates we are saving some arbitrary number of key value pairs together
+
+    - **docker-registry**: [docker-registry](https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod) type indicates Authentication with a custom container registry
+
+    - **tls**: [tls](https://kubernetes.github.io/ingress-nginx/user-guide/tls/) .pem files and CA secret type
+
+```bash
+kubectl create secret generic <secret_name> --from-literal key=value
+```
 
 ## Service Types
 

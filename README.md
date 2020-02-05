@@ -106,8 +106,8 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 
 ### LoadBalancer
 
-[LoadBalancer documentation](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer]
+[LoadBalancer documentation](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)
 
 ### ExternalName
 
-[ExternalName documentation](https://kubernetes.io/docs/concepts/services-networking/service/#externalname]
+[ExternalName documentation](https://kubernetes.io/docs/concepts/services-networking/service/#externalname)

@@ -97,3 +97,17 @@ kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 - tartgetPort: Port a pod is exposing internally
 
 - nodePort: the port that you use to access pod inside your browser (outside access)
+
+
+
+### ClusterIP
+
+[ClusterIP documentation](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)
+
+### LoadBalancer
+
+[LoadBalancer documentation](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer]
+
+### ExternalName
+
+[ExternalName documentation](https://kubernetes.io/docs/concepts/services-networking/service/#externalname]

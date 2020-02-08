@@ -45,6 +45,14 @@ To delete an object you must pass in the config file that was used to create tha
 kubectl delete -f ./SIMPLEK8S/client-pod.yaml
 ```
 
+### Create
+
+To create an object without a config file we can use an imperative command to create a new object
+
+```bash
+kubectl create secret generic <secret_name> --from-literal key=value
+```
+
 ## Object Types
 
 - **Services**: Sets up networking in a kubernetes Cluster

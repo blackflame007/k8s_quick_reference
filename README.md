@@ -140,6 +140,6 @@ Install nginx-ingress for docker desktop (windows and mac)
   
  3. Verify the service was enabled by running the following:
  
- - ```
+- ```bash
   kubectl get svc -n ingress-nginx
   ```

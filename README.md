@@ -119,3 +119,27 @@ kubectl create secret generic <secret_name> --from-literal key=value
 ### ExternalName
 
 [ExternalName documentation](https://kubernetes.io/docs/concepts/services-networking/service/#externalname)
+
+### Nginx-Ingress
+
+[nginx-ingress](https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html)
+
+Install nginx-ingress for docker desktop (windows and mac)
+
+1. Make sure you executed the mandatory generic script that was discussed in the lecture:
+
+- ```bash
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
+  ```
+
+2. Execute the provider specific script to enable the service:
+
+- ```bash
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+  ```
+  
+ 3. Verify the service was enabled by running the following:
+ 
+ - ```bash
+  kubectl get svc -n ingress-nginx
+  ```

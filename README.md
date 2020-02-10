@@ -124,7 +124,7 @@ kubectl create secret generic <secret_name> --from-literal key=value
 
 Read more about [nginx-ingress](https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html)
 
-Install nginx-ingress for docker desktop (windows and mac)
+#### Install nginx-ingress for docker desktop (windows and mac)
 
 1. Make sure you executed the mandatory generic script:
 
@@ -143,7 +143,35 @@ Install nginx-ingress for docker desktop (windows and mac)
 - ```bash
   kubectl get svc -n ingress-nginx
   ```
-  
+#### Install nginx-ingress with helm
+
+```bash
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+```
+
+```bash
+helm install my-nginx stable/nginx-ingress --set rbac.create=true 
+```
+ ## Helm
+ 
+ ### Install Helm 3
+ 
+ Get the download binary
+ ```bash
+ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+ ```
+ 
+ Change permissions to execute the downloaded file
+ ```bash
+ chmod 700 get_helm.sh
+ ```
+ 
+ Running the script should install helm 3
+ 
+ ```bash
+ ./get_helm.sh
+ ```
+
  ## Cluster
  
  ### Setting up a new Cluster on Google Cloud Platform(GCP)

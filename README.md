@@ -126,7 +126,7 @@ kubectl create secret generic <secret_name> --from-literal key=value
 
 Install nginx-ingress for docker desktop (windows and mac)
 
-1. Make sure you executed the mandatory generic script that was discussed in the lecture:
+1. Make sure you executed the mandatory generic script:
 
 - ```bash
   kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
@@ -143,3 +143,28 @@ Install nginx-ingress for docker desktop (windows and mac)
 - ```bash
   kubectl get svc -n ingress-nginx
   ```
+  
+ ## Cluster
+ 
+ ### Setting up a new Cluster on Google Cloud Platform(GCP)
+ 
+ Open googles built in shell and configure your gcloud to use your cluster
+ 
+1. Configure your gcloud to use your google projects ID
+
+- ```bash
+    gcloud config set project multi-k8s-test-1234567
+  ```
+
+2. Configure your gcloud to use the zone your cluster is located
+
+- ```bash
+    gcloud config set compute/zone us-west1-a
+  ```
+  
+3. Configure your gcloud to use the cluster you have made
+
+- ```bash
+    gcloud container clusters get-credentials multi-cluster-demo
+  ```
+

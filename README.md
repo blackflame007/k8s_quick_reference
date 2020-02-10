@@ -120,9 +120,9 @@ kubectl create secret generic <secret_name> --from-literal key=value
 
 [ExternalName documentation](https://kubernetes.io/docs/concepts/services-networking/service/#externalname)
 
-### Nginx-Ingress
+### [Nginx-Ingress](https://github.com/kubernetes/ingress-nginx/)
 
-[nginx-ingress](https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html)
+Read more about [nginx-ingress](https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html)
 
 Install nginx-ingress for docker desktop (windows and mac)
 

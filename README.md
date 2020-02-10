@@ -154,6 +154,8 @@ helm install my-nginx stable/nginx-ingress --set rbac.create=true
 ```
  ## Helm
  
+ Helm is a package manager for kubernetes and allows you to install packages through repos called charts
+ 
  ### Install Helm 3
  
  Get the download binary

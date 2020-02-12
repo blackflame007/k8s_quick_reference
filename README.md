@@ -77,7 +77,7 @@ kubectl create secret generic <secret_name> --from-literal key=value
 
   - Rarely used directly in production
 
-- **Secrets**: Securely stores one or more pieces of information in the cluster such as a database password
+- **Secrets**: Securely stores one or more pieces of information in the cluster such as a database password (like an environment variable in bash)
 
   ```bash
   kubectl create secret generic <secret_name> --from-literal key=value

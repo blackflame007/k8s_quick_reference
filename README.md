@@ -58,7 +58,7 @@ kubectl create secret generic <secret_name> --from-literal key=value
 - **Services**: Sets up networking in a kubernetes Cluster
 
 - **Deployment**: Replaces pod... Maintains a set of identical pods ensuring that they have the correct config and that the right number exists
-
+  - [Here](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) is a guide for pull and image from a private container registry 
   - Runs a set of identical pods (one or more)
 
   - Monitors the state of each pod, updates as necessary
